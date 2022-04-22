@@ -45,7 +45,6 @@ app.post('/v1/explorers', (req, res) => {
 app.put('/v1/explorers', (req, res) => {
     res.send(`PUT METHOD IMPLEMENTED, Explorers V1 API  ${new Date()}`)
     console.log(req.body)
-    // Agregar la lógica para persistir
     // HTTP STATUS: 200 successful 
     res.status(200).json({message: "Actualizado exitosamente"})
 })
@@ -55,7 +54,13 @@ app.put('/v1/explorers/:id', (req, res) => {
     console.log(req.params)
     console.log(req.body)
 
-    // Agregar la lógica para persistir
     // HTTP STATUS: 200 successful 
     res.status(200).json({message: "Actualizado exitosamente"})
+})
+
+app.delete('/v1/explorers/:id', (req, res) => {
+    res.send(`DELETE METHOD IMPLEMENTED, Explorers V1 API  ${new Date()}`)
+
+    // HTTP STATUS: 200 successful 
+    res.status(200).json({message: "Eliminado exitosamente"})
 })
