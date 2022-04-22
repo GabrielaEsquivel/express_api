@@ -36,9 +36,9 @@ app.get('/v1/explorers/:id', (req, res) => {
 
 app.post('/v1/explorers', (req, res) => {
     res.send(`POST METHOD IMPLEMENTED, Explorers V1 API  ${new Date()}`)
-    const explorer = { id: 1, name: "Explorer 1"}; 
+    console.log(req.body)
     // Agregar la lógica para persistir
     // HTTP STATUS: 200 successful 
-    res.status(200).json(explorer)
+    res.status(200).json({message: "Creado exitosamente"})
 
 })
